@@ -60,6 +60,21 @@
     height: 75px;
     background-color: blue;
 }
+.top-right img{
+    border-radius: 44px;
+    height: 100%;
+    padding-left: 4px;
+    position: relative;
+}
+.top-right .fa-search{
+    position: absolute;
+}
+.top-right .fa-paperclip{
+    position: absolute;
+}
+.top-right .fa-ellipsis-v{
+    position: absolute;
+}
 #main{
     height: 95%;
     width: 100%;
@@ -78,6 +93,7 @@
     background-color: lightblue;
     display: flex;
     position: relative;
+    padding-top: 3px;
 }
 .ricevi-notifiche i{
     padding-left: 20px;
