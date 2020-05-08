@@ -25,9 +25,12 @@
 .top-left{
     width: 40%;
     height: 75px;
-    background-color: lightgray;
+    background-color: white;
     position: relative;
     border-right: 2px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .top-left img{
     width:20%;
@@ -38,27 +41,22 @@
     padding-right: 18px;
     opacity: 0.4;
 }
-.fa-circle-notch{
-    position: absolute;
-    bottom: 35px;
-    right: 45px;
-
-}
-.fa-comment-alt{
-    position: absolute;
-    right: 18px;
-    bottom: 35px;
-}
-.fa-ellipsis-v{
-    position: absolute;
-    right: 0;
-    bottom: 35px;
-}
 
 .top-right{
     width: 60%;
     height: 75px;
-    background-color: blue;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon_due{
+    padding-right: 3px;
+    opacity: 0.4;
+}
+.icon_due i{
+    padding-right: 11px;
+    font-size: 20px;
 }
 .top-right img{
     border-radius: 44px;
@@ -66,15 +64,7 @@
     padding-left: 4px;
     position: relative;
 }
-.top-right .fa-search{
-    position: absolute;
-}
-.top-right .fa-paperclip{
-    position: absolute;
-}
-.top-right .fa-ellipsis-v{
-    position: absolute;
-}
+
 #main{
     height: 95%;
     width: 100%;
