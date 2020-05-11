@@ -11,7 +11,6 @@
     position: relative;
 }
 #container{
-    background-color: grey;
     width: 70%;
     height: 88vh;
     position: absolute;
@@ -35,6 +34,7 @@
 .top-left img{
     width:14%;
     border-radius: 54px;
+    margin-left: 13px;
 
 }
 .top-left i{
@@ -60,13 +60,13 @@
 }
 .top-right img{
     border-radius: 44px;
-    height: 100%;
+    height: 77%;
     padding-left: 4px;
     position: relative;
 }
 
 #main{
-    height: 95%;
+    height: 91%;
     width: 100%;
     background-color: black;
     display: flex;
@@ -109,15 +109,9 @@
     color: white;
     font-size: 42px;
 }
-.ricevi-notifiche h4{
-    padding-top: 10px;
-    padding-left: 7px;
-}
-.ricevi-notifiche p{
-    position: absolute;
-    bottom: 28px;
-    right: 195px;
-    text-decoration: underline;
+.ricevi-notifiche-text{
+    padding-top: 12px;
+    padding-left: 13px;
 }
 .main-right{
     width: 60%;
@@ -141,10 +135,15 @@
     font-size: 25px;
     opacity: 0.4;
 }
+.write-message{
+    flex-grow: 1;
+    padding-right: 19px;
+    padding-left: 20px;
+}
 
-#fname-due{
+.write-message #fname-due{
     height: 100%;
-    width: 545px;
+    width: 100%;
     border: 0;
     padding-left: 10px;
 }
