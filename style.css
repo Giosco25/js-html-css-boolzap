@@ -116,7 +116,7 @@
 .ricevi-notifiche p{
     position: absolute;
     bottom: 28px;
-    right: 215px;
+    right: 195px;
     text-decoration: underline;
 }
 .main-right{
@@ -216,4 +216,7 @@
 }
 .text-due{
     margin-left: -50px;
+}
+.template{
+    display: none;
 }
