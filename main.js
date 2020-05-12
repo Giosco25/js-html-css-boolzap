@@ -25,5 +25,23 @@ function invia_messaggio(){
     var new_message = $('.template .message-received').clone();
     new_message.text(testo_utente);
     // aggiungiamo alla pagina il nuovo messaggio
-    $('.main-right').append(new_message);
+    $('.main-right').append(new_message)
 }
+
+
+
+// Milestone 2
+// ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
+// un “ok” come risposta, che apparirà dopo 1 secondo.
+
+$('#fname-due').each(
+    function() {
+    $(this).val();
+    var risposta = $('.template .message-sent').clone();
+    risposta.text('ok');
+    // var risposta = $('.template .message-sent').clone();
+    // risposta.text('ok').fadeIn(1000);
+   console.log(risposta);
+    $('.main-right').append(risposta);
+}
+);

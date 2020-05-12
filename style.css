@@ -219,3 +219,11 @@
 .template{
     display: none;
 }
+
+.sent-due{
+    float: left;
+    background-color:lawngreen;
+    display: inline-block;
+    clear: both;
+    border-radius: 20px;
+}
