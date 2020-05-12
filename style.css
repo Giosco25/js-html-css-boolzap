@@ -82,7 +82,7 @@
     height: 5%;
     background-color: white;
 }
-#fname{
+#new-chat-input{
     float: right;
     width: 94%;
     height: 100%;
@@ -141,7 +141,7 @@
     padding-left: 20px;
 }
 
-.write-message #fname-due{
+.write-message #write-text-input{
     height: 100%;
     width: 100%;
     border: 0;
@@ -222,7 +222,7 @@
 
 .sent-due{
     float: left;
-    background-color:lawngreen;
+    background-color:white;
     display: inline-block;
     clear: both;
     border-radius: 20px;
