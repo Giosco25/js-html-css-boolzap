@@ -37,14 +37,14 @@ function invia_messaggio(){
 
 }
 $('#write-text-input').focus(function(){
-   // tolgo la classe "fa-microphone" dall'icona di destra    // aggiungo le classi "fa-paper-plane"
+   // tolgo la classe "fa-microphone" dall'icona di destra // aggiungo le classi "fa-paper-plane"
       $('.vocal i').removeClass('fa-microphone').addClass('fa-paper-plane');
 
 }
 );
 
 $('#write-text-input').blur(function(){
-// aggiungo la classe "fa-paper-plane" dall'icona di destra    // aggiungo la classe "fa-microphone"
+// aggiungo la classe "fa-paper-plane" dall'icona di destra // aggiungo la classe "fa-microphone"
  $('.vocal i').removeClass('fa-paper-plane').addClass('fa-microphone');
 }
 );
@@ -52,13 +52,6 @@ $('#write-text-input').blur(function(){
 // Milestone 2
 // ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
 // un “ok” come risposta, che apparirà dopo 1 secondo.
-
-   //  var risposta = $('.template .message-sent').clone();
-   //  risposta.text('ok');
-   //  // var risposta = $('.template .message-sent').clone();
-   //  // risposta.text('ok').fadeIn(1000);
-   // console.log(risposta);
-   //  $('.main-right').append(risposta);
 
 function invio_risposta(){
     var risposta = $('.template .message-sent').clone().addClass('sent-due');;
@@ -75,6 +68,23 @@ function invio_risposta(){
 $('.search i').click(
     function(){
     console.log('click');
-var testo_utente = $('#new-chat-input').val().trim().toLowerCase();
-}
-)
+    // sto recuperando il nome che l'utente ha cercato
+    var nome_cercato = $('#new-chat-input').val().trim().toLowerCase();
+    console.log('nome_cercato');
+    // controllo se l'utente digita qualcosa
+    if (nome_cercato != '') {
+        $('.avatar-images').each(function(){
+            var recupero_nome = $(this).find('h3').text().trim().toLowerCase();
+            console.log(recupero_nome);
+            if (recupero_nome == nome_cercato) {
+                $(this).show();
+                console.log('giusto');
+
+            }else{
+                console.log('sbagliato');
+                $(this).hide();
+            }
+
+        })
+    }
+});
