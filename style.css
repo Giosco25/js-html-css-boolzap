@@ -119,6 +119,7 @@
     background-image:url(img/wallpaper.jpg);
     position: relative;
     background-size: contain;
+    display: none;
 }
 .right-bottom{
     height: 60px;
@@ -182,8 +183,8 @@
     margin-top: 20px;
 }
 
-.visible{
-    display: none;
+.active{
+    display: block;
 }
 .contacts{
     width: 100%;

@@ -105,10 +105,11 @@ $('.search i').click(
 // click sul primo contatto con classe visible
 $('.contact').click(function(){
     console.log('click');
-    var  contatto_recuperato = $('.contact .visible');
-    console.log(contatto_recuperato);
-    contatto_recuperato.removeClass('visible');
-    var contatto_successivo = contatto_recuperato.next('.contact');
-    console.log(contatto_successivo);
-    contatto_successivo.addClass('visible');
+    var indice_contatto = $(this).index();
+    console.log(indice_contatto);
+    $('.main-right.active').removeClass('active')
+    $('.main-right').eq(indice_contatto).addClass('active');
+
+
+    
 });
