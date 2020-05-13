@@ -109,7 +109,7 @@ $('.contact').click(function(){
     console.log(indice_contatto);
     $('.main-right.active').removeClass('active')
     $('.main-right').eq(indice_contatto).addClass('active');
-    var recupero_img = $(this).attr('src');
+    var recupero_img = $(this).find('img').attr('src');
     console.log(recupero_img);
-    $('.top-right img').attr('src, recupero_img')
+    $('.top-right img').attr('src', recupero_img);
 });
