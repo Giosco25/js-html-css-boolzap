@@ -54,13 +54,15 @@ $('#write-text-input').blur(function(){
 // un “ok” come risposta, che apparirà dopo 1 secondo.
 
 function invio_risposta(){
-    var risposta = $('.template .message-sent').clone().addClass('sent-due');;
+    var risposta = $('.template .message-sent').clone().addClass('sent-due');
     risposta.find('.sent').text('ok');
     // var risposta = $('.template .message-sent').clone();
     // risposta.text('ok').fadeIn(1000);
    console.log(risposta);
     $('.main-right').append(risposta);
 };
+
+
 // ● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
 // contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
 // “mar” rimangono solo Marco e Martina)
@@ -73,7 +75,7 @@ $('.search i').click(
     console.log('nome_cercato');
     // controllo se l'utente digita qualcosa
     if (nome_cercato != '') {
-        $('.avatar-images').each(function(){
+        $('.contact').each(function(){
             var recupero_nome = $(this).find('h3').text().trim().toLowerCase();
             console.log(recupero_nome);
             if (recupero_nome == nome_cercato) {
@@ -86,5 +88,27 @@ $('.search i').click(
             }
 
         })
+    } else {
+        $('.contact').show();
     }
+});
+
+// Milestone 3
+// ● Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire
+// nuovi messaggi per ogni conversazione
+// ● Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
+// permette di cancellare il messaggio selezionato
+
+// Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire
+// nuovi messaggi per ogni conversazione
+
+// click sul primo contatto con classe visible
+$('.contact').click(function(){
+    console.log('click');
+    var  contatto_recuperato = $('.contact .visible');
+    console.log(contatto_recuperato);
+    contatto_recuperato.removeClass('visible');
+    var contatto_successivo = contatto_recuperato.next('.contact');
+    console.log(contatto_successivo);
+    contatto_successivo.addClass('visible');
 });
