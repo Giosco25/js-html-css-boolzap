@@ -26,7 +26,7 @@ function invia_messaggio(){
     var new_message = $('.template .message-received').clone();
     new_message.find('.received').text(testo_utente);
     // aggiungiamo alla pagina il nuovo messaggio
-    $('.main-right').append(new_message);
+    $('.main-right.active').append(new_message);
     $('#write-text-input').val('');
     var secondi = 1000;
     setTimeout(function() {
@@ -59,7 +59,7 @@ function invio_risposta(){
     // var risposta = $('.template .message-sent').clone();
     // risposta.text('ok').fadeIn(1000);
    console.log(risposta);
-    $('.main-right').append(risposta);
+    $('.main-right.active').append(risposta);
 };
 
 // MILESTONE 2
