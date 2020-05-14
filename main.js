@@ -62,12 +62,13 @@ function invio_risposta(){
     $('.main-right').append(risposta);
 };
 
-
+// MILESTONE 2
 // ● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
 // contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
 // “mar” rimangono solo Marco e Martina)
 
-$('.search i').click(
+// $('.search i').click(
+$('#new-chat-input').keyup(
     function(){
     console.log('click');
     // sto recuperando il nome che l'utente ha cercato
@@ -78,7 +79,7 @@ $('.search i').click(
         $('.contact').each(function(){
             var recupero_nome = $(this).find('h3').text().trim().toLowerCase();
             console.log(recupero_nome);
-            if (recupero_nome == nome_cercato) {
+            if (recupero_nome.includes(nome_cercato) ) {
                 $(this).show();
                 console.log('giusto');
 
@@ -92,6 +93,7 @@ $('.search i').click(
         $('.contact').show();
     }
 });
+
 
 // Milestone 3
 // ● Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire
