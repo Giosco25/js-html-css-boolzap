@@ -29,9 +29,9 @@ function invia_messaggio(){
     // preparo la funzione da utilizzare per utilizzare il template
     var template_function = Handlebars.compile(new_message);
     var messaggio = {
-        div: 'message-received',
-        paragrafo : 'received',
-        testo : testo_utente
+        'div': 'message-received',
+        'paragrafo' : 'received',
+        'testo' : testo_utente
     }
     var html_message = template_function(messaggio);
 
@@ -74,9 +74,9 @@ function invio_risposta(){
     // preparo la funzione da utilizzare per utilizzare il template
     var template_function = Handlebars.compile(new_message);
     var messaggio = {
-        div: 'message-sent-due',
-        paragrafo : 'sent',
-        testo : 'ok'
+        'div': 'message-sent-due',
+        'paragrafo' : 'sent',
+        'testo' : 'ok'
     }
     var html_message = template_function(messaggio);
 
