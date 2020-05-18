@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/097503c669.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     </head>
     <body>
     <div class="wrapper">
@@ -167,7 +168,7 @@
         </div>
         </div>
     </div>
-            <div class="template">
+            <!-- <div class="template">
                 <div class="message-received">
                   <p class="received">Bene grazie e tu?</p>
                 </div>
@@ -175,8 +176,15 @@
                      <p class="sent">Ciao come stai?</p>
 
                     </div>
-                </div>
-
+                </div> -->
+                <script id="message-template" type="text/x-handlebars-template">
+                    <div class="{{ div }}">
+                      <p class="{{ paragrafo }}">{{ testo }}</p>
+                    </div>
+                  <!-- <div class="message-sent">
+                    {{body}}
+                  </div> -->
+                </script>
     <script src="main.js" charset="utf-8"></script>
     </body>
 </html>

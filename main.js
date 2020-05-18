@@ -9,7 +9,7 @@ $('.vocal .fa-microphone').click(
     invia_messaggio();
 
 }
-)
+);
 
 // Inviare il messaggio con "pulsante Invio" della tastiera
 $('#write-text-input').keypress(function(event){
@@ -23,10 +23,20 @@ function invia_messaggio(){
     var testo_utente = $('#write-text-input').val();
     console.log(testo_utente);
     // cloniamo il div
-    var new_message = $('.template .message-received').clone();
-    new_message.find('.received').text(testo_utente);
+    // var new_message = $('.template .message-received').clone();
+    // new_message.find('.received').text(testo_utente);
+    var new_message = $('#message-template').html();
+    // preparo la funzione da utilizzare per utilizzare il template
+    var template_function = Handlebars.compile(new_message);
+    var messaggio = {
+        div: 'message-received',
+        paragrafo : 'received',
+        testo : testo_utente
+    }
+    var html_message = template_function(messaggio);
+
     // aggiungiamo alla pagina il nuovo messaggio
-    $('.main-right.active').append(new_message);
+    $('.main-right.active').append(html_message);
     $('#write-text-input').val('');
     var secondi = 1000;
     setTimeout(function() {
@@ -54,12 +64,25 @@ $('#write-text-input').blur(function(){
 // un “ok” come risposta, che apparirà dopo 1 secondo.
 
 function invio_risposta(){
-    var risposta = $('.template .message-sent').clone().addClass('sent-due');
-    risposta.find('.sent').text('ok');
+    // var risposta = $('.template .message-sent').clone().addClass('sent-due');
+    // risposta.find('.sent').text('ok');
     // var risposta = $('.template .message-sent').clone();
     // risposta.text('ok').fadeIn(1000);
-   console.log(risposta);
-    $('.main-right.active').append(risposta);
+   // console.log(risposta);
+    // $('.main-right.active').append(risposta);
+    var new_message = $('#message-template').html();
+    // preparo la funzione da utilizzare per utilizzare il template
+    var template_function = Handlebars.compile(new_message);
+    var messaggio = {
+        div: 'message-sent-due',
+        paragrafo : 'sent',
+        testo : 'ok'
+    }
+    var html_message = template_function(messaggio);
+
+    // aggiungiamo alla pagina il nuovo messaggio
+    $('.main-right.active').append(html_message);
+
 };
 
 // MILESTONE 2
