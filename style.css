@@ -116,7 +116,98 @@ body {
 	color: #4F7485;
 	font-size: 13.5px;
 }
-#main{
+/*** FINE DISCLAIMER  ****/
+
+/**** SEARCHBAR ****/
+
+.searchbar {
+	width: 100%;
+	height: 50px;
+	background: #FAFAFA;
+}
+.searchbar .searchbar-input {
+	float: right;
+	width: calc(85% - 7px);
+	height: 36px;
+	margin: 7px 7px 7px 0;
+	border-left: 0;
+	border-top: 1px solid #F5F5F5;
+	border-right: 1px solid #F5F5F5;
+	border-bottom: 1px solid #F5F5F5;
+    outline: none;
+}
+.searchbar .searchbar-label {
+	display: inline-block;
+	width: calc(15% - 7px);
+	height: 36px;
+	margin: 7px 0 7px 7px;
+	border-top: 1px solid #F5F5F5;
+	border-right: 0;
+	border-bottom: 1px solid #F5F5F5;
+	border-left: 1px solid #F5F5F5;
+	background: #fff;
+	text-align: center;
+	color: #B6B9BB;
+}
+.searchbar i{
+    margin-top: 9px;
+}
+
+/***** FINE SEARCHBAR ****/
+
+/**** CONTACTS ****/
+.contacts {
+	width: 100%;
+	height: calc(100% - 70px - 50px - 75px);
+	background: #fff;
+	/* overflow-y: scroll; */
+}
+.contact {
+	display: flex;
+	cursor: pointer;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #F5F5F5;
+}
+.contact-logo {
+	width: 60px;
+	height: 60px;
+	margin: auto 20px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+.contact-logo img {
+	width: 100%;
+	height: 100%;
+}
+.contact-info {
+	width: calc(100% - 100px);
+	height: 60px;
+	margin: auto 10px auto 0;
+	line-height: 5px;
+    margin-top: -5px
+}
+.contact-info h3 {
+	font-size: 17px;
+	font-weight: normal;
+}
+.time-right{
+    float: right;
+}
+.contact-info span.time-right {
+	color: #B6B9BB;
+	font-size: 12px;
+	font-weight: lighter;
+}
+.contact-info small {
+	color: #B6B9BB;
+    padding-left: 12px;
+}
+/**** FINE CONTACTS ****/
+
+
+
+/* #main{
     height: 91%;
     width: 100%;
     background-color: black;
@@ -132,7 +223,7 @@ body {
     width: 100%;
     height: 50px;
     background-color: white;
-}
+} */
 #new-chat-input{
     float: right;
     width: 94%;
@@ -242,18 +333,6 @@ body {
 .active{
     display: block;
 }
-.contacts{
-    width: 100%;
-    height: calc(100% - 75px - 50px - 60px);
-    background: #fff;
-    overflow-y: scroll;
-}
-.contact{
-    width: 100%;
-    height: 15%;
-    background-color: ghostwhite;
-    border-bottom: 1px solid white;
-    display: flex;
 
     /* width: 100%;
 height: calc(100% - 75px - 50px - 60px);
