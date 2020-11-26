@@ -32,7 +32,11 @@ function invia_messaggio(){
         'div': 'message-received',
         'paragrafo' : 'received',
         'testo' : testo_utente
+<<<<<<< HEAD
     };
+=======
+    }
+>>>>>>> master
     var html_message = template_function(messaggio);
 
     // aggiungiamo alla pagina il nuovo messaggio
