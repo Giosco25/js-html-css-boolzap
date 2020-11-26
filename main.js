@@ -32,7 +32,7 @@ function invia_messaggio(){
         'div': 'message-received',
         'paragrafo' : 'received',
         'testo' : testo_utente
-    }
+    };
     var html_message = template_function(messaggio);
 
     // aggiungiamo alla pagina il nuovo messaggio
