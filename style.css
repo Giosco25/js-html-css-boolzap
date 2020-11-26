@@ -29,6 +29,7 @@ body {
 	z-index: 1;
     background-color: red;
 }
+
 .left {
 	width: 35%;
 	border-right: 1px solid #D6D6D6;
@@ -46,6 +47,11 @@ body {
 	height: 70px;
 	background: #EAEAEA;
 }
+/* HEADER LEFT */
+
+.header-left .header-left-logo, .header-right .header-right-logo {
+	float: left;
+}
 
 .header-left-logo{
     height: 100%;
@@ -57,52 +63,32 @@ body {
     margin-left: 10px;
     margin-top: 10px;
     border-radius: 100%;
-}
-#top{
-    display: flex;
-}
-.top-left{
-    width: 40%;
-    height: 75px;
-    background-color: white;
-    position: relative;
-    border-right: 2px solid lightgray;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.top-left img{
-    width:50px;
-    border-radius: 100%;
-    margin-left: 10px;
-
-}
-.top-left i{
-    padding-right: 18px;
-    opacity: 0.4;
+    cursor: pointer;
 }
 
-.top-right{
-    width: 60%;
-    height: 75px;
-    background-color: white;
+.header-left-icons{
+    float: right;
+	width: auto;
+	margin-right: 15px;
+	text-align: right;
+}
+
+.header-left-icons i{
+    color: rgb(177, 177, 177);
+    font-size: 22px;
+    margin-left: 13px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+/*** FINE HEADER ****/
+
+
+/*** DISCLAIMER ****/
+.disclaimer{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.icon_due{
-    padding-right: 3px;
-    opacity: 0.4;
-}
-.icon_due i{
-    padding-right: 11px;
-    font-size: 20px;
-}
-.top-right img{
-    border-radius: 44px;
-    height: 77%;
-    padding-left: 4px;
-    position: relative;
+	width: 100%;
+	height: 80px;
+	background: #8EDAFC;
 }
 
 #main{
