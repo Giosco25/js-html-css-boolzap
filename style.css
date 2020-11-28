@@ -258,8 +258,34 @@ body {
 	overflow-y: scroll;
 }
 .message-sent{
-	width: 100px;
+	width: 150px;
+	position: relative;
 }
+.message-options, .message-received-options{
+		/* display: none; */
+	position:absolute;
+	right:26px;
+	color: #B6B9BB;
+	cursor: pointer;
+}
+.message-time, .message-received-time{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	font-size: 10px;
+	color: #B6B9BB;
+}
+.message-options-panel{
+	display: none;
+    position: absolute;
+    bottom: -75px;
+    width: 150px;
+    height: 80px;
+    background: white;
+    box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.75);
+}
+
+/**** Pannello messaggi inviati e ricevuti ****/
 .panel-sent, .panel-received{
 	background: white;
 	margin: 5px 0;
@@ -270,11 +296,23 @@ body {
     font-size: 15px;
 }
 .panel-received{
-	background-color: lightgreen;
+	background-color: #D5F9BA;
+	min-width: 28%;
 }
+.message-options-panel{
+	display: none;
+    position: absolute;
+    bottom: -75px;
+    width: 150px;
+    height: 80px;
+    background: white;
+    box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.75);
+}
+
 .message-received{
 	float: right;
 	margin-top: 10px;
+	position: relative;
 }
 
 /**** FOOTER ****/
