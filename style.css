@@ -80,7 +80,9 @@ body {
     margin-top: 25px;
     cursor: pointer;
 }
+/*** FINE HEADER LEFT ****/
 
+/*** HEADER RIGHT ****/
 .header-right .header-right-logo img {
 	width: 50px;
 	height: 50px;
@@ -114,6 +116,7 @@ body {
 	color: rgb(177, 177, 177);
     font-size: 22px;
 }
+/*** FINE HEADER RIGHT ****/
 /*** FINE HEADER ****/
 
 
@@ -224,6 +227,7 @@ body {
 .contact-info h3 {
 	font-size: 17px;
 	font-weight: normal;
+	margin-left: 10px;
 }
 .time-right{
     float: right;
@@ -239,173 +243,77 @@ body {
 }
 /**** FINE CONTACTS ****/
 
-
-
-/* #main{
-    height: 91%;
-    width: 100%;
-    background-color: black;
-    display: flex;
-}
-.main-left{
-    width: 40%;
-    height: 100%;
-    background-color: red;
-
-}
-.new-chat{
-    width: 100%;
-    height: 50px;
-    background-color: white;
-} */
-#new-chat-input{
-    float: right;
-    width: 94%;
-    height: 50px;
-    border:0;
-    padding-left: 8px;
-}
-.search .fa-search{
-    padding-top: 10px;
-    padding-left: 7px;
-    opacity: 0.4;
-
-}
-.ricevi-notifiche{
-    width: 100%;
-    height: 60px;
-    background-color: lightblue;
-    display: flex;
-    position: relative;
-    padding-top: 3px;
-}
-.ricevi-notifiche i{
-    width: 50px;
-    margin: auto 0 auto 20px;
-    background: #F2FBFF;
-    border-radius: 100%;
-    text-align: center;
-    color: #8EDAFC;
-    line-height: 50px;
-    font-size: 20px;
-}
-.ricevi-notifiche-text{
-    padding-top: 12px;
-    padding-left: 13px;
-}
-.main-right{
-    width: 60%;
-    height: 100%;
-    background-image:url(img/wallpaper.jpg);
-    position: relative;
-    background-size: contain;
-    display: none;
-}
-.right-bottom{
-    height: 59px;
-    width: 60%;
-    background-color: beige;
-    bottom:3px;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    right: 0px;
-}
-.smile {
-    padding-left: 24px;
-    padding-top: 16px;
-    font-size: 25px;
-    opacity: 0.4;
-}
-.write-message{
-    flex-grow: 1;
-    padding-right: 19px;
-    padding-left: 20px;
+/**** RIGHT MESSAGES  ****/
+.right-messages-contact{
+	width: 100%;
+	height: calc(100% - 70px - 70px);
 }
 
-.write-message #write-text-input{
-    height: 100%;
-    width: 100%;
-    border: 0;
-    padding-left: 10px;
-}
-.vocal{
-    padding-top: 16px;
-    padding-right: 21px;
-    font-size: 22px;
-    opacity: 0.4;
+.right-messages {
+	display: none;
+	height: 100%;
+	width: 100%;
+	padding: 5% 10%;
+	background-image: url('img/mine.jpg');
+	overflow-y: scroll;
 }
 .message-sent{
-    background-color: white;
-    border-radius: 20px;
-    padding: 20px;
-    display: inline-block;
-    float: left;
-    margin-left: 20px;
-    margin-top: 20px;
+	width: 100px;
+}
+.panel-sent, .panel-received{
+	background: white;
+	margin: 5px 0;
+    padding: 15px 15px 20px 15px;
+    min-width: 20%;
+    max-width: 60%;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.panel-received{
+	background-color: lightgreen;
 }
 .message-received{
-    border-radius: 20px;
-    padding: 20px;
-    background-color:lawngreen;
-    display: inline-block;
-    float:right;
-    clear: both;
-    margin-right: 20px;
+	float: right;
+	margin-top: 10px;
 }
-.message-sent-due{
-    background-color: white;
-    border-radius: 20px;
-    padding: 20px;
-    display: inline-block;
-    float: left;
-    clear: both;
-    margin-left: 20px;
-    margin-top: 20px;
+
+/**** FOOTER ****/
+.right-footer {
+	background-color: #F3EEEA;
+	width: 100%;
+	height: 70px;
+	display: flex;
 }
+.right-footer-icon {
+	width: 10%;
+	height: 100%;
+	line-height: 70px;
+	text-align: center;
+	font-size: 25px;
+	color: #6B7376;
+}
+.new-message-inputs {
+	width: 80%;
+	height: 50px;
+	margin: 10px 0;
+	padding: 15px;
+	border: 0;
+	border-radius: 5px;
+	font-size: 14px;
+    outline: none;
+    margin-top: 10px;
+}
+
 
 .active{
     display: block;
 }
+.active-contact{
+	border-bottom-color: transparent;
+	background: #E9EBEB;
+}
 
-    /* width: 100%;
-height: calc(100% - 75px - 50px - 60px);
-background: #fff;
-overflow-y: scroll; */
 
-}
-.contact img{
-    width: 60px;
-    height: 60px;
-    margin: auto 20px;
-    border-radius: 100%;
-    overflow: hidden;
-
-}
-.contact h3{
-    padding-left: 12px;
-    padding-top: 20px;
-}
-.contact p{
-    padding-top: 53px;
-    opacity: 0.4;
-    /* margin-left: -69px; */
-
-}
-.text{
-    margin-left: -69px;
-}
-.text-due{
-    margin-left: -50px;
-}
 .template{
     display: none;
-}
-
-.sent-due{
-    float: left;
-    background-color:white;
-    display: inline-block;
-    clear: both;
-    border-radius: 20px;
 }
