@@ -5,6 +5,9 @@
 .template {
 	display: none;
 }
+.display{
+	display:none;
+}
 body {
 	display: flex;
 	height: 100vh;
@@ -27,7 +30,6 @@ body {
 	min-width: 900px;
 	height: 95%;
 	z-index: 1;
-    background-color: red;
 }
 
 .left {
@@ -262,12 +264,16 @@ body {
 	position: relative;
 }
 .message-options, .message-received-options{
-		/* display: none; */
+	/* display: none; */
 	position:absolute;
 	right:26px;
 	color: #B6B9BB;
 	cursor: pointer;
 }
+.message-sent i{
+	display: none;
+}
+
 .message-time, .message-received-time{
 	position: absolute;
 	bottom: 5px;
@@ -330,7 +336,7 @@ body {
 	font-size: 25px;
 	color: #6B7376;
 }
-.new-message-inputs {
+#new-message-inputs {
 	width: 80%;
 	height: 50px;
 	margin: 10px 0;

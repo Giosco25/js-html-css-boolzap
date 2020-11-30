@@ -4,7 +4,7 @@
 
 
 // cliccare sull'icona con la "classe = vocal"
-$('.vocal .fa-microphone').click(
+$('.right-footer-icon .fa-microphone').click(
     function(){
     invia_messaggio();
 
@@ -12,7 +12,7 @@ $('.vocal .fa-microphone').click(
 );
 
 // Inviare il messaggio con "pulsante Invio" della tastiera
-$('#write-text-input').keypress(function(event){
+$('#new-message-inputs').keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
      invia_messaggio();
@@ -20,7 +20,7 @@ $('#write-text-input').keypress(function(event){
 });
 function invia_messaggio(){
      // Aggiunta di un messaggio : l’utente scrive un testo nella parte bassa e cliccando
-    var testo_utente = $('#write-text-input').val();
+    var testo_utente = $('#new-message-inputs').val();
     console.log(testo_utente);
     // cloniamo il div
     // var new_message = $('.template .message-received').clone();
@@ -32,16 +32,13 @@ function invia_messaggio(){
         'div': 'message-received',
         'paragrafo' : 'received',
         'testo' : testo_utente
-<<<<<<< HEAD
     };
-=======
-    }
->>>>>>> master
+
     var html_message = template_function(messaggio);
 
     // aggiungiamo alla pagina il nuovo messaggio
-    $('.main-right.active').append(html_message);
-    $('#write-text-input').val('');
+    $('.right-messages.active').append(html_message);
+    $('#new-message-inputs').val('');
     var secondi = 1000;
     setTimeout(function() {
         invio_risposta();
@@ -50,16 +47,16 @@ function invia_messaggio(){
 
 
 }
-$('#write-text-input').focus(function(){
+$('#new-message-inputs').focus(function(){
    // tolgo la classe "fa-microphone" dall'icona di destra // aggiungo le classi "fa-paper-plane"
-      $('.vocal i').removeClass('fa-microphone').addClass('fa-paper-plane');
+    $('.right-footer-icon i').removeClass('fa-microphone').addClass('fa-paper-plane');
 
 }
 );
 
-$('#write-text-input').blur(function(){
+$('#new-message-inputs').blur(function(){
 // aggiungo la classe "fa-paper-plane" dall'icona di destra // aggiungo la classe "fa-microphone"
- $('.vocal i').removeClass('fa-paper-plane').addClass('fa-microphone');
+ $('.right-footer-icon i').removeClass('fa-paper-plane').addClass('fa-microphone');
 }
 );
 
@@ -85,7 +82,7 @@ function invio_risposta(){
     var html_message = template_function(messaggio);
 
     // aggiungiamo alla pagina il nuovo messaggio
-    $('.main-right.active').append(html_message);
+    $('.right-messages.active').append(html_message);
 
 };
 
@@ -95,11 +92,11 @@ function invio_risposta(){
 // “mar” rimangono solo Marco e Martina)
 
 // $('.search i').click(
-$('#new-chat-input').keyup(
+$('#contacts-filter').keyup(
     function(){
     console.log('click');
     // sto recuperando il nome che l'utente ha cercato
-    var nome_cercato = $('#new-chat-input').val().trim().toLowerCase();
+    var nome_cercato = $('#contacts-filter').val().trim().toLowerCase();
     console.log('nome_cercato');
     // controllo se l'utente digita qualcosa
     if (nome_cercato != '') {
@@ -122,7 +119,6 @@ $('#new-chat-input').keyup(
 });
 
 
-// Milestone 3
 // ● Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire
 // nuovi messaggi per ogni conversazione
 // ● Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
@@ -136,9 +132,20 @@ $('.contact').click(function(){
     console.log('click');
     var indice_contatto = $(this).index();
     console.log(indice_contatto);
-    $('.main-right.active').removeClass('active')
-    $('.main-right').eq(indice_contatto).addClass('active');
-    var recupero_img = $(this).find('img').attr('src');
+    $('.contact').removeClass('active-contact');
+    // aggiungo la classe active al contatto su cui ho cliccato
+    $(this).addClass('active-contact');
+    // recupero il nome del contatto su cui ho cliccato
+    var nome_contatto = $(this).find('.contact-name').text();
+    console.log(nome_contatto);
+    // inserisco il nome del contatto nella parte di intestazione di destra
+    $('#header-right-contact-name').text(nome_contatto);
+    // recupero il percorso del file dell'immagine del contatto su cui ho cliccato
+    var recupero_img = $(this).find('.contact-logo img').attr('src');
     console.log(recupero_img);
-    $('.top-right img').attr('src', recupero_img);
+    // imposto il percorso del file dell'immagine nella parte di intestazione di destra
+    $('.header-right-logo img').attr('src', recupero_img);
+
+    $('.right-messages.active').removeClass('active');
+    $('.right-messages').eq(indice_contatto).addClass('active');    
 });
